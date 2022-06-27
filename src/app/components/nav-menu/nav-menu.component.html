@@ -1,0 +1,16 @@
+<nav class="nav">
+  <ul class="nav-menu">
+    <li class="nav-menu__link" *ngFor="let link of LinksArray">{{link}}<span class="triangle"></span></li>
+  </ul>
+</nav>
+<div class="burger" (click)="openMobi()">
+  <mat-icon>menu</mat-icon>
+</div>
+
+<ng-container *ngIf="mobileMenu">
+  <div class="mobile-wrapper">
+    <ul class="nav-mobi">
+      <li class="nav-mobi__link" *ngFor="let link of LinksArray">{{link}}<span class="triangle"></span></li>
+    </ul>
+  </div>
+</ng-container>

@@ -1,0 +1,29 @@
+<header class="header">
+  <div class="wrapper-mobile">
+    <div class="wrapper-menu-logo">
+      <div class="logo-block">
+        <img class="logo-block__img" src="./assets/picture/logo.png" alt="">
+      </div>
+      <div class="nav-wrapper">
+        <app-nav-menu></app-nav-menu>
+      </div>
+    </div>
+    <div class="wrapper-search">
+      <app-search #search></app-search>
+      <div class="btn-nav button-search" title="Поиск" (click)="search.show()"><mat-icon>search</mat-icon></div>
+      <div class="btn-nav button-add"><mat-icon>add_circle</mat-icon></div>
+    </div>
+  </div>
+  <div class="allarm-wrapper">
+    <app-notification>
+      <div class="allarm-block">
+        <div class="alarm message"><mat-icon> mail_outline</mat-icon><span *ngIf="count>0" class="badge">5</span></div>
+        <div class="alarm bell"><mat-icon>notifications_none</mat-icon><span class="badge">5</span></div>
+        <div class="alarm avatar"><mat-icon>account_circle</mat-icon><span *ngIf="count>0" class="badge">10</span></div>
+      </div>
+    </app-notification>
+  </div>
+
+
+</header>
+
